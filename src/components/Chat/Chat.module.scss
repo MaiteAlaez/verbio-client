@@ -1,0 +1,127 @@
+.component {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding: 16px;
+  background-color: #FF1654;
+  color: white;
+}
+
+.area {
+  flex-grow: 1;
+  padding: 16px;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.footer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 40px;
+  padding: 8px 16px;
+  background-color: #d9dbde;
+}
+
+.footerInput {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  background-color: #d9dbde;
+  padding: 8px;
+  height: 25px;
+  font-size: 15px;
+}
+
+.footerSubmitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9dbde;
+  font-size: 25px;
+  color: #FF1654;
+  border: none;
+  margin-right: 8px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.footerLogoutButton {
+  height: 30px;
+  background-color: #FF1654;
+  padding: 4px 16px;
+  color: white;
+  font-size: medium;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+
+  &:hover {
+    background-color: black;
+    cursor: pointer;
+  }
+}
+
+.message {
+  display: flex;
+  flex-flow: row nowrap;
+  clear: both;
+  margin-bottom: 16px;
+
+  &-system {
+    float: left;
+    .messageContent {
+      border-radius: 15px 15px 15px 5px;
+    }
+  }
+
+  &-user {
+    float: right;
+    .messageContent {
+      background-color: #FF1654;
+      color: white;
+      border-radius: 15px 15px 5px 15px;
+    }
+  }
+}
+
+.messageIcon {
+  align-self: flex-end;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 8px;
+  color: #FF1654;
+  padding: 4px;
+  border: .5px solid #d9dbde;
+  border-radius: 100%;
+  box-shadow: 0 4px 2px -2px #d9dbde;
+}
+
+.messageContent {
+  padding: 16px;
+  box-shadow: 0 4px 2px -2px #d9dbde;
+  border: .5px solid #d9dbde;
+}
+
+.messageContentImage {
+  border-radius: 10px;
+
+  @media (max-width: 700px) {
+    width: 400px;
+  }
+
+  @media (max-width: 500px) {
+    width: 200px;
+  }
+}
